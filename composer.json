@@ -28,9 +28,6 @@
         "httpsoft/http-server-request": "^1.1",
         "symfony/process": "^7.0",
         "symfony/console": "^6.4",
-        "jbroadway/urlify": "^1.2",
-        "ext-gd": "*",
-        "ext-mbstring": "*",
-        "phpoffice/phpspreadsheet": "^2.0"
+        "jbroadway/urlify": "^1.2"
     }
 }
