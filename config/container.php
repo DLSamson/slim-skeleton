@@ -1,12 +1,11 @@
 <?php
 
-use Fenom;
 use DI\Container;
 use Psr\Log\LoggerInterface;
 
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Contracts\Translation\Translator;
-use Illuminate\Contracts\Validation\Factory as ValidationFactory;
+use Illuminate\Validation\Factory as ValidationFactory;
 use Illuminate\Translation\FileLoader;
 
 use function DI\create;
@@ -40,6 +39,6 @@ return [
     Translator::class => create(\Illuminate\Translation\Translator::class)
         ->constructor(get(FileLoader::class), 'ru'),
 
-    ValidationFactory::class => create(\Illuminate\Validation\Factory::class)
+    ValidationFactory::class => create(ValidationFactory::class)
         ->constructor(get(Translator::class)),
 ];
